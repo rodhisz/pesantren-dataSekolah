@@ -31,26 +31,6 @@
             <div class="row">
                 <div class="col-lg-12 position-relative z-index-2">
 
-                    {{-- Chart Card --}}
-                    <div class="row mb-4">
-                        <div class="col-lg-12 col-md-12 mt-4 mb-4">
-                            <div class="card z-index-2 ">
-                                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
-                                    <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
-                                        <div class="chart">
-                                            <canvas id="chartBar-tamu" height="170"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <h6 class="mb-0 ">Jumlah Kunjungan Tamu</h6>
-                                    <p class="text-sm ">Jumlah Kunjungan IDN Boarding School Setiap Bulan</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {{-- End Chart Card --}}
-
                     {{-- Table Card --}}
                     <div class="card mb-4 ">
                         <div class="d-flex">
@@ -58,7 +38,7 @@
                                 class="icon icon-shape icon-lg bg-gradient-success shadow text-center border-radius-xl mt-n3 ms-4">
                                 <i class="fas fa-users opacity-10"></i>
                             </div>
-                            <h6 class="mt-3 mb-2 ms-3 ">Data Sekolah</h6>
+                            <h6 class="mt-3 mb-2 ms-3 ">Data Murid</h6>
                         </div>
                         <div class="card-body p-3">
                             <div class="row">
@@ -89,14 +69,18 @@
                                             </thead>
                                             <tbody>
                                                 @foreach ($data_sekolah as $row)
-                                                <tr>
-                                                    <td class="text-sm font-weight-normal">{{$row->nama}}</td>
-                                                    <td class="text-sm font-weight-normal">{{$row->nipd}}</td>
-                                                    <td class="text-sm font-weight-normal">{{$row->jenis_kelamin}}</td>
-                                                    <td class="text-sm font-weight-normal">{{$row->nisn}}</td>
-                                                    <td class="text-sm font-weight-normal">{{$row->status}}</td>
-                                                    <td class="text-sm font-weight-normal">{{$row->tempat_lahir}}</td>
-                                                </tr>
+                                                    <tr>
+                                                        <td class="text-sm font-weight-normal">{{ $row->nama }}</td>
+                                                        <td class="text-sm font-weight-normal">{{ $row->nipd }}</td>
+                                                        <td class="text-sm font-weight-normal">
+                                                            {{ $row->jenis_kelamin }}
+                                                        </td>
+                                                        <td class="text-sm font-weight-normal">{{ $row->nisn }}</td>
+                                                        <td class="text-sm font-weight-normal">{{ $row->status }}</td>
+                                                        <td class="text-sm font-weight-normal">
+                                                            {{ $row->tempat_lahir }}
+                                                        </td>
+                                                    </tr>
                                                 @endforeach
                                             </tbody>
                                         </table>

@@ -103,7 +103,7 @@
                 borderRadius: 4,
                 borderSkipped: false,
                 backgroundColor: "rgba(255, 255, 255, .8)",
-                data: <?php echo json_encode($datas)?>,
+                data: ,
                 maxBarThickness: 6
             }, ],
         },
